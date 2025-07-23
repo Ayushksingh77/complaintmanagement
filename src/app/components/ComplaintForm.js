@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Box, Button, TextField, MenuItem, RadioGroup, FormControlLabel, Radio, Typography, Paper, Alert } from '@mui/material';
 import axios from 'axios';
+import Image from 'next/image';
 
 const categories = ['Product', 'Service', 'Support'];
 const priorities = ['Low', 'Medium', 'High'];
@@ -29,8 +30,22 @@ export default function ComplaintForm() {
   };
 
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: '#f4f7f6', py: 8 }}>
-      <Paper elevation={4} sx={{ maxWidth: 480, mx: 'auto', p: 4, borderRadius: 4, boxShadow: 3 }}>
+    <Box sx={{ minHeight: '100vh', bgcolor: 'transparent', py: 8 }}>
+      <Paper elevation={4} sx={{
+        maxWidth: 480,
+        mx: 'auto',
+        p: 4,
+        borderRadius: 4,
+        boxShadow: 3,
+        background: 'rgba(255,255,255,0.7)',
+        backdropFilter: 'blur(12px)',
+        border: '1.5px solid rgba(255,255,255,0.35)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <Image src="/globe.svg" alt="Logo" width={56} height={56} />
+        </Box>
         <Typography variant="h4" mb={3} fontWeight={700} color="primary.main" align="center">
           Submit a Complaint
         </Typography>
@@ -48,7 +63,20 @@ export default function ComplaintForm() {
               ))}
             </RadioGroup>
           </Box>
-          <Button type="submit" variant="contained" size="large" sx={{ mt: 2, borderRadius: 2, fontWeight: 600, letterSpacing: 1 }}>
+          <Button type="submit" variant="contained" size="large" sx={{
+            mt: 2,
+            borderRadius: 2,
+            fontWeight: 600,
+            letterSpacing: 1,
+            background: 'linear-gradient(90deg, #1976d2 0%, #21cbf3 100%)',
+            boxShadow: '0 4px 24px 0 rgba(33,203,243,0.15)',
+            transition: 'transform 0.2s, box-shadow 0.2s',
+            '&:hover': {
+              transform: 'scale(1.04)',
+              boxShadow: '0 8px 32px 0 rgba(33,203,243,0.25)',
+              background: 'linear-gradient(90deg, #21cbf3 0%, #1976d2 100%)',
+            },
+          }}>
             Submit
           </Button>
           {success && <Alert severity="success" sx={{ mt: 2 }}>{success}</Alert>}
