@@ -97,9 +97,15 @@ A modern web application for submitting and managing complaints, featuring a bea
 ---
 
 ## 📸 Screenshots
-_Add screenshots of the user and admin interfaces here._
 
----
+
+
+<img width="1895" height="963" alt="Screenshot 2025-07-23 172127" src="https://github.com/user-attachments/assets/c3c34271-f61b-4e5e-b25c-b379a5f3b107" />
+<img width="1908" height="927" alt="Screenshot 2025-07-23 172232" src="https://github.com/user-attachments/assets/334f6542-fa13-4f9c-90d7-21f05db74407" />
+<img width="1914" height="926" alt="Screenshot 2025-07-23 172247" src="https://github.com/user-attachments/assets/19e0950d-1888-4dad-a4cd-1eb17e48cc38" />
+<img width="1911" height="879" alt="Screenshot 2025-07-23 172326" src="https://github.com/user-attachments/assets/09fd767f-e8ca-42cc-bc78-ea31e4060728" />
+
+
 
 ## 📄 License
 MIT
